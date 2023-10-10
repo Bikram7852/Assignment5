@@ -8,12 +8,19 @@ namespace BankingBusinessLogicLayer
 {
     public class Bank
     {
+        public enum ATM
+        {
+            Deposit,
+            Withdraw,
+            Check_Balance
+        }
         public float DepositAmount { get; set; }
         public DateTime DepositDate { get; set; }
         public string BranchName { get; set; }
         public long AccountNo { get; set; }
         public DateTime WithdrawDate { get; set; }
         public float WithdrawAmount { get; set; }
+        public float Balance { get; set; }
         public void Deposit(float amt, DateTime depositDate, string branchName, long accNo)
         {
             DepositAmount = amt;
